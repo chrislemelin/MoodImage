@@ -1,0 +1,7 @@
+/Users/chrislemelin/Projects/MoodImage/MoodImage/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/chrislemelin/Projects/MoodImage/MoodImage/obj/x86/Debug/MoodImage.gtk-gui.gui.stetic
+/Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/MoodImage.exe.mdb
+/Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/MoodImage.exe
+/Users/chrislemelin/Projects/MoodImage/MoodImage/obj/x86/Debug/MoodImage.exe
+/Users/chrislemelin/Projects/MoodImage/MoodImage/obj/x86/Debug/MoodImage.exe.mdb
+/Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/Pranas.ScreenshotCapture.dll
