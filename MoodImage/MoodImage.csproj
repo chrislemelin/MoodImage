@@ -56,6 +56,12 @@
     <Reference Include="Pranas.ScreenshotCapture">
       <HintPath>..\packages\Pranas.ScreenshotCapture.1.0.11\lib\net40\Pranas.ScreenshotCapture.dll</HintPath>
     </Reference>
+    <Reference Include="Gma.System.MouseKeyHook">
+      <HintPath>..\packages\MouseKeyHook.5.4.0\lib\net40\Gma.System.MouseKeyHook.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -68,6 +74,13 @@
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Window.cs" />
+    <Compile Include="gtk-gui\MoodImage.Window.cs" />
+    <Compile Include="Snapper.cs" />
+    <Compile Include="DataParser.cs" />
+    <Compile Include="EmotionData.cs" />
+    <Compile Include="FaceRectangle.cs" />
+    <Compile Include="Scores.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

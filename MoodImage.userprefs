@@ -1,7 +1,15 @@
 ﻿<Properties StartupConfiguration="{2D4DD2AD-2906-4EE8-824B-E086DADA925E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MoodImage/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MoodImage/Scores.cs">
     <Files>
-      <File FileName="MoodImage/Program.cs" Line="1" Column="1" />
+      <File FileName="MoodImage/Program.cs" Line="23" Column="4" />
+      <File FileName="MoodImage/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="MoodImage/Snapper.cs" Line="88" Column="4" />
+      <File FileName="MoodImage/packages.config" Line="1" Column="1" />
+      <File FileName="MoodImage/Window.cs" Line="1" Column="1" />
+      <File FileName="MoodImage/DataParser.cs" Line="19" Column="30" />
+      <File FileName="MoodImage/EmotionData.cs" Line="12" Column="3" />
+      <File FileName="MoodImage/FaceRectangle.cs" Line="10" Column="3" />
+      <File FileName="MoodImage/Scores.cs" Line="6" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
