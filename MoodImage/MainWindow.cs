@@ -13,11 +13,12 @@ using MoodImage;
 
 public partial class MainWindow : Gtk.Window
 {
-	public Snapper snapper;
+	public SnapperManager snapper;
 	public MainWindow() : base(Gtk.WindowType.Toplevel)
 	{
 		Build();
-		snapper = new Snapper();
+		snapper = new SnapperManager();
+
 	}
 
 

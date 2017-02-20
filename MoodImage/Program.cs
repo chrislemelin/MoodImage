@@ -21,7 +21,6 @@ class MainClass
 			Application.Init();
 			MainWindow win = new MainWindow();
 
-
 			win.Show();
 			win.DeleteEvent += delete_event;
 			Application.Run();

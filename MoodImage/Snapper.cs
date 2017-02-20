@@ -10,19 +10,23 @@ using System.Threading;
 using Gtk;
 
 
+
 namespace MoodImage
 {
 	public class Snapper
 	{
-		Window w = new Window();
+		Window w;
+		Image snap;
+		Gdk.Pixbuf pixelBuf;
 
 		public Snapper()
 		{
-			
+	
 		}
 
 		public void requestPic()
 		{
+	
 			w = new Window();
 			w.Hide();
 
@@ -38,13 +42,14 @@ namespace MoodImage
 
 		private void GetRequestStreamCallback(IAsyncResult asynchronousResult)
 		{
-			System.Drawing.Image screen;
-			screen = Pranas.ScreenshotCapture.TakeScreenshot(true);
+			System.Drawing.Image screen = Pranas.ScreenshotCapture.TakeScreenshot(true);
 			byte[] byteArray;
+
 			using (var ms = new MemoryStream())
 			{
 				screen.Save(ms, screen.RawFormat);
 				byteArray = ms.ToArray();
+				pixelBuf =  new Gdk.Pixbuf(byteArray,screen.Width/3,screen.Height/3);
 			}
 
 			HttpWebRequest request = (HttpWebRequest)asynchronousResult.AsyncState;
@@ -96,6 +101,10 @@ namespace MoodImage
 			}
 			if (data.Count > 0)
 				w.setInfo(builder.ToString());
+			Console.WriteLine("butts");
+
+		
+			w.setImage(pixelBuf);
 		}
 	}
 }

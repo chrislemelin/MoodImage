@@ -12,5 +12,13 @@ namespace MoodImage
 		{
 			info.Buffer.Text = s;
 		}
+
+		public void setImage(Pixbuf pixelBuf)
+		{
+			Console.WriteLine("trying to write");
+			displayImage.Pixbuf = pixelBuf;
+			Console.WriteLine("finished write");
+			
+		}
 	}
 }

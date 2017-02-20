@@ -4,6 +4,12 @@ namespace MoodImage
 {
 	public partial class Window
 	{
+		private global::Gtk.VBox vbox1;
+
+		private global::Gtk.VBox vbox2;
+
+		private global::Gtk.Image displayImage;
+
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
 
 		private global::Gtk.TextView info;
@@ -16,22 +22,45 @@ namespace MoodImage
 			this.Title = global::Mono.Unix.Catalog.GetString("Window");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			// Container child MoodImage.Window.Gtk.Container+ContainerChild
+			this.vbox1 = new global::Gtk.VBox();
+			this.vbox1.Name = "vbox1";
+			this.vbox1.Spacing = 6;
+			// Container child vbox1.Gtk.Box+BoxChild
+			this.vbox2 = new global::Gtk.VBox();
+			this.vbox2.Name = "vbox2";
+			this.vbox2.Spacing = 6;
+			// Container child vbox2.Gtk.Box+BoxChild
+			this.displayImage = new global::Gtk.Image();
+			this.displayImage.Name = "displayImage";
+			this.vbox2.Add(this.displayImage);
+			global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.displayImage]));
+			w1.Position = 0;
+			w1.Expand = false;
+			w1.Fill = false;
+			this.vbox1.Add(this.vbox2);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.vbox2]));
+			w2.Position = 0;
+			w2.Expand = false;
+			w2.Fill = false;
+			// Container child vbox1.Gtk.Box+BoxChild
 			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow();
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
 			this.info = new global::Gtk.TextView();
-			this.info.Buffer.Text = "this is an example";
 			this.info.CanFocus = true;
 			this.info.Name = "info";
 			this.GtkScrolledWindow.Add(this.info);
-			this.Add(this.GtkScrolledWindow);
+			this.vbox1.Add(this.GtkScrolledWindow);
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));
+			w4.Position = 1;
+			this.Add(this.vbox1);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
+			this.DefaultWidth = 500;
+			this.DefaultHeight = 572;
 			this.Show();
 		}
 	}

@@ -81,6 +81,7 @@
     <Compile Include="EmotionData.cs" />
     <Compile Include="FaceRectangle.cs" />
     <Compile Include="Scores.cs" />
+    <Compile Include="SnapperManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -17,10 +17,12 @@ public partial class MainWindow
 		this.DefaultHeight = 300;
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.snap = new global::Gtk.Button();
+		this.snap.WidthRequest = 150;
+		this.snap.HeightRequest = 100;
 		this.snap.CanFocus = true;
 		this.snap.Name = "snap";
 		this.snap.UseUnderline = true;
-		this.snap.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.snap.Label = global::Mono.Unix.Catalog.GetString("Snap");
 		this.Add(this.snap);
 		if ((this.Child != null))
 		{
