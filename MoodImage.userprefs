@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{2D4DD2AD-2906-4EE8-824B-E086DADA925E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MoodImage/Window.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MoodImage/MainWindow.cs">
     <Files>
       <File FileName="MoodImage/Program.cs" Line="22" Column="38" />
-      <File FileName="MoodImage/MainWindow.cs" Line="20" Column="3" />
-      <File FileName="MoodImage/Snapper.cs" Line="53" Column="5" />
-      <File FileName="MoodImage/Window.cs" Line="1" Column="1" />
+      <File FileName="MoodImage/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="MoodImage/Snapper.cs" Line="30" Column="13" />
+      <File FileName="MoodImage/Resources.cs" Line="6" Column="75" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

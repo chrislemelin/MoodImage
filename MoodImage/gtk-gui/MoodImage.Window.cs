@@ -50,6 +50,8 @@ namespace MoodImage
 			this.info = new global::Gtk.TextView();
 			this.info.CanFocus = true;
 			this.info.Name = "info";
+			this.info.Editable = false;
+			this.info.CursorVisible = false;
 			this.GtkScrolledWindow.Add(this.info);
 			this.vbox1.Add(this.GtkScrolledWindow);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));

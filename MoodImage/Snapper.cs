@@ -9,7 +9,7 @@ using System.IO;
 using System.Threading;
 using Gtk;
 
-
+using System.Resources;
 
 namespace MoodImage
 {
@@ -26,14 +26,11 @@ namespace MoodImage
 
 		public void requestPic()
 		{
-	
 			w = new Window();
 			w.Hide();
 
-
-
-			HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize");
-			request.Headers.Add("Ocp-Apim-Subscription-Key", "89b424d4445548eead8652bcc0f15ef2");
+			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Resources.URL);
+			request.Headers.Add("Ocp-Apim-Subscription-Key", Resources.APIKEY);
 			request.ContentType = "application/octet-stream";
 
 			request.Method = "POST";
@@ -66,7 +63,6 @@ namespace MoodImage
 
 		private void GetResponseCallback(IAsyncResult asynchronousResult)
 		{
-			Console.WriteLine("got here");
 			HttpWebRequest request = (HttpWebRequest)asynchronousResult.AsyncState;
 
 			// End the operation
@@ -79,16 +75,13 @@ namespace MoodImage
 			streamResponse.Close();
 			streamRead.Close();
 
-			// Release the HttpWebResponse
 			response.Close();
-			//allDone.Set();
 
 			parseData(responseString);
 
 		}
 		private void parseData(String s)
 		{
-			//w.setInfo(s);
 			w.Show();
 			DataParser parser = new DataParser();
 			List<EmotionData> data = parser.parse(s);
@@ -101,8 +94,10 @@ namespace MoodImage
 			}
 			if (data.Count > 0)
 				w.setInfo(builder.ToString());
-			Console.WriteLine("butts");
-
+			else
+			{
+				w.setInfo("no faces found");
+			}
 		
 			w.setImage(pixelBuf);
 		}

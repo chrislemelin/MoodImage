@@ -78,13 +78,17 @@
     <Compile Include="gtk-gui\MoodImage.Window.cs" />
     <Compile Include="Snapper.cs" />
     <Compile Include="DataParser.cs" />
-    <Compile Include="EmotionData.cs" />
-    <Compile Include="FaceRectangle.cs" />
-    <Compile Include="Scores.cs" />
     <Compile Include="SnapperManager.cs" />
+    <Compile Include="JsonObjects\EmotionData.cs" />
+    <Compile Include="JsonObjects\FaceRectangle.cs" />
+    <Compile Include="JsonObjects\Scores.cs" />
+    <Compile Include="Resources.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JsonObjects\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
