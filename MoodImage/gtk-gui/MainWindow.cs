@@ -3,7 +3,11 @@
 
 public partial class MainWindow
 {
-	private global::Gtk.Button snap;
+	private global::Gtk.HBox hbox1;
+
+	private global::Gtk.Button snapShotButton;
+
+	private global::Gtk.Button recordButton;
 
 	protected virtual void Build()
 	{
@@ -16,19 +20,39 @@ public partial class MainWindow
 		this.DefaultWidth = 300;
 		this.DefaultHeight = 300;
 		// Container child MainWindow.Gtk.Container+ContainerChild
-		this.snap = new global::Gtk.Button();
-		this.snap.WidthRequest = 150;
-		this.snap.HeightRequest = 100;
-		this.snap.CanFocus = true;
-		this.snap.Name = "snap";
-		this.snap.UseUnderline = true;
-		this.snap.Label = global::Mono.Unix.Catalog.GetString("Snap");
-		this.Add(this.snap);
+		this.hbox1 = new global::Gtk.HBox();
+		this.hbox1.WidthRequest = 300;
+		this.hbox1.HeightRequest = 300;
+		this.hbox1.Name = "hbox1";
+		this.hbox1.Homogeneous = true;
+		this.hbox1.Spacing = 4;
+		this.hbox1.BorderWidth = ((uint)(10));
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.snapShotButton = new global::Gtk.Button();
+		this.snapShotButton.CanFocus = true;
+		this.snapShotButton.Name = "snapShotButton";
+		this.snapShotButton.UseUnderline = true;
+		this.snapShotButton.Label = global::Mono.Unix.Catalog.GetString("SnapShot");
+		this.hbox1.Add(this.snapShotButton);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.snapShotButton]));
+		w1.Position = 0;
+		w1.Expand = false;
+		// Container child hbox1.Gtk.Box+BoxChild
+		this.recordButton = new global::Gtk.Button();
+		this.recordButton.CanFocus = true;
+		this.recordButton.Name = "recordButton";
+		this.recordButton.UseUnderline = true;
+		this.recordButton.Label = global::Mono.Unix.Catalog.GetString("Record");
+		this.hbox1.Add(this.recordButton);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.recordButton]));
+		w2.Position = 1;
+		w2.Expand = false;
+		this.Add(this.hbox1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
 		this.Show();
-		this.snap.Clicked += new global::System.EventHandler(this.OnSnapClicked);
+		this.snapShotButton.Clicked += new global::System.EventHandler(this.OnSnapShotButtonClicked);
 	}
 }

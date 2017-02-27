@@ -12,8 +12,6 @@ namespace MoodImage
 		public float Neutral { get; set; }
 		public float Sadness { get; set; }
 		public float Surprise { get; set; }
-
-
 	
 		public Scores()
 		{

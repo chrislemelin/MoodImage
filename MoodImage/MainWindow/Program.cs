@@ -17,7 +17,6 @@ class MainClass
 
 		public static void Main()
 		{
-
 			Application.Init();
 			MainWindow win = new MainWindow();
 
@@ -31,7 +30,6 @@ class MainClass
 		static void delete_event(object obj, DeleteEventArgs args)
 		{
 			Application.Quit();
-
 		}
 
 	}

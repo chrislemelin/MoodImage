@@ -15,9 +15,12 @@ namespace MoodImage
 {
 	public class Snapper
 	{
-		Window w;
-		Image snap;
-		Gdk.Pixbuf pixelBuf;
+		//Image snap;
+		public Gdk.Pixbuf pixelBuf;
+		public EventWaitHandle waitHandle = new AutoResetEvent(false);
+
+		public List<EmotionData> data;
+		public DateTime timeStamp;
 
 		public Snapper()
 		{
@@ -26,8 +29,6 @@ namespace MoodImage
 
 		public void requestPic()
 		{
-			w = new Window();
-			w.Hide();
 
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Resources.URL);
 			request.Headers.Add("Ocp-Apim-Subscription-Key", Resources.APIKEY);
@@ -40,6 +41,7 @@ namespace MoodImage
 		private void GetRequestStreamCallback(IAsyncResult asynchronousResult)
 		{
 			System.Drawing.Image screen = Pranas.ScreenshotCapture.TakeScreenshot(true);
+			timeStamp = DateTime.Now;
 			byte[] byteArray;
 
 			using (var ms = new MemoryStream())
@@ -82,24 +84,12 @@ namespace MoodImage
 		}
 		private void parseData(String s)
 		{
-			w.Show();
 			DataParser parser = new DataParser();
-			List<EmotionData> data = parser.parse(s);
+			List<EmotionData> faceData = parser.parse(s);
 
-			StringBuilder builder = new StringBuilder();
-			for (int a = 0; a < data.Count; a++)
-			{
-				builder.Append(data[a].toString());
-				builder.Append('\n');
-			}
-			if (data.Count > 0)
-				w.setInfo(builder.ToString());
-			else
-			{
-				w.setInfo("no faces found");
-			}
-		
-			w.setImage(pixelBuf);
+	
+			this.data = faceData;
+			waitHandle.Set();
 		}
 	}
 }

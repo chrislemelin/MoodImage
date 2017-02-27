@@ -7,7 +7,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/MoodImage.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="400 300">
+  <widget class="Gtk.Window" id="MainWindow" design-size="500 300">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -15,15 +15,42 @@
     <property name="DefaultWidth">300</property>
     <property name="DefaultHeight">300</property>
     <child>
-      <widget class="Gtk.Button" id="snap">
+      <widget class="Gtk.HBox" id="hbox1">
         <property name="MemberName" />
-        <property name="WidthRequest">150</property>
-        <property name="HeightRequest">100</property>
-        <property name="CanFocus">True</property>
-        <property name="Type">TextOnly</property>
-        <property name="Label" translatable="yes">Snap</property>
-        <property name="UseUnderline">True</property>
-        <signal name="Clicked" handler="OnSnapClicked" />
+        <property name="WidthRequest">300</property>
+        <property name="HeightRequest">300</property>
+        <property name="Homogeneous">True</property>
+        <property name="Spacing">4</property>
+        <property name="BorderWidth">10</property>
+        <child>
+          <widget class="Gtk.Button" id="snapShotButton">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">SnapShot</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnSnapShotButtonClicked" />
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">False</property>
+            <property name="Expand">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="recordButton">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Record</property>
+            <property name="UseUnderline">True</property>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">False</property>
+            <property name="Expand">False</property>
+          </packing>
+        </child>
       </widget>
     </child>
   </widget>
@@ -59,17 +86,22 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+          <widget class="Gtk.Alignment" id="alignment1">
             <property name="MemberName" />
-            <property name="ShadowType">In</property>
             <child>
-              <widget class="Gtk.TextView" id="info">
+              <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
                 <property name="MemberName" />
-                <property name="CanFocus">True</property>
-                <property name="ShowScrollbars">True</property>
-                <property name="Editable">False</property>
-                <property name="CursorVisible">False</property>
-                <property name="Text" translatable="yes" />
+                <property name="ShadowType">In</property>
+                <child>
+                  <widget class="Gtk.TextView" id="info">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="ShowScrollbars">True</property>
+                    <property name="Editable">False</property>
+                    <property name="CursorVisible">False</property>
+                    <property name="Text" translatable="yes" />
+                  </widget>
+                </child>
               </widget>
             </child>
           </widget>
@@ -77,6 +109,42 @@
             <property name="Position">1</property>
             <property name="AutoSize">True</property>
           </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="plotImage">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="Position">2</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="MoodImage.LiveMoodWindow" design-size="400 300">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">LiveMoodWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <widget class="Gtk.VBox" id="vbox1">
+        <property name="MemberName" />
+        <property name="Spacing">6</property>
+        <child>
+          <widget class="Gtk.Image" id="Plot">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder />
         </child>
       </widget>
     </child>

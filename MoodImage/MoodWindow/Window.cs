@@ -1,5 +1,9 @@
-﻿using System;
+﻿using NPlot;
+using System;
 using Gdk;
+using Gtk;
+
+using System.IO;
 namespace MoodImage
 {
 	public partial class Window : Gtk.Window

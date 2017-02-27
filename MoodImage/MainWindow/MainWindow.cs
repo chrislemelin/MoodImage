@@ -8,23 +8,24 @@ using System.Threading.Tasks;
 using System.Text;
 using System.IO;
 using System.Threading;
+using System.Resources;
 
 using MoodImage;
 
 public partial class MainWindow : Gtk.Window
 {
-	public SnapperManager snapper;
 	public MainWindow() : base(Gtk.WindowType.Toplevel)
 	{
 		Build();
-		snapper = new SnapperManager();
 
 	}
 
-
-
-	protected void OnSnapClicked(object sender, EventArgs e)
+	protected void OnSnapShotButtonClicked(object sender, EventArgs e)
 	{
-		snapper.requestPic();
+		MoodWindowSetup setup = new MoodWindowSetup();
+		setup.setUp();
+
 	}
+
+
 }

@@ -10,9 +10,13 @@ namespace MoodImage
 
 		private global::Gtk.Image displayImage;
 
+		private global::Gtk.Alignment alignment1;
+
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
 
 		private global::Gtk.TextView info;
+
+		private global::Gtk.Image plotImage;
 
 		protected virtual void Build()
 		{
@@ -43,6 +47,9 @@ namespace MoodImage
 			w2.Expand = false;
 			w2.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
+			this.alignment1 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
+			this.alignment1.Name = "alignment1";
+			// Container child alignment1.Gtk.Container+ContainerChild
 			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow();
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
@@ -53,9 +60,18 @@ namespace MoodImage
 			this.info.Editable = false;
 			this.info.CursorVisible = false;
 			this.GtkScrolledWindow.Add(this.info);
-			this.vbox1.Add(this.GtkScrolledWindow);
-			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));
-			w4.Position = 1;
+			this.alignment1.Add(this.GtkScrolledWindow);
+			this.vbox1.Add(this.alignment1);
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.alignment1]));
+			w5.Position = 1;
+			// Container child vbox1.Gtk.Box+BoxChild
+			this.plotImage = new global::Gtk.Image();
+			this.plotImage.Name = "plotImage";
+			this.vbox1.Add(this.plotImage);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.plotImage]));
+			w6.Position = 2;
+			w6.Expand = false;
+			w6.Fill = false;
 			this.Add(this.vbox1);
 			if ((this.Child != null))
 			{
