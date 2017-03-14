@@ -8,6 +8,8 @@ namespace MoodImage
 
 		private global::Gtk.Image Plot;
 
+		private global::Gtk.Alignment alignment2;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
@@ -27,6 +29,12 @@ namespace MoodImage
 			w1.Position = 0;
 			w1.Expand = false;
 			w1.Fill = false;
+			// Container child vbox1.Gtk.Box+BoxChild
+			this.alignment2 = new global::Gtk.Alignment(0.5F, 0.5F, 1F, 1F);
+			this.alignment2.Name = "alignment2";
+			this.vbox1.Add(this.alignment2);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.alignment2]));
+			w2.Position = 1;
 			this.Add(this.vbox1);
 			if ((this.Child != null))
 			{

@@ -27,5 +27,10 @@ public partial class MainWindow : Gtk.Window
 
 	}
 
+	protected void OnRecordButtonClicked(object sender, EventArgs e)
+	{
+		LiveMoodSetup setup = new LiveMoodSetup();
+		setup.Start();
 
+	}
 }

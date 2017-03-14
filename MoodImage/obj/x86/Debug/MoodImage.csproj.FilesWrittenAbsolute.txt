@@ -8,3 +8,5 @@
 /Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/Gma.System.MouseKeyHook.dll
 /Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/Newtonsoft.Json.dll
 /Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/NPlot.dll
+/Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/OxyPlot.dll
+/Users/chrislemelin/Projects/MoodImage/MoodImage/bin/Debug/OxyPlot.GtkSharp.dll

@@ -54,5 +54,6 @@ public partial class MainWindow
 		}
 		this.Show();
 		this.snapShotButton.Clicked += new global::System.EventHandler(this.OnSnapShotButtonClicked);
+		this.recordButton.Clicked += new global::System.EventHandler(this.OnRecordButtonClicked);
 	}
 }

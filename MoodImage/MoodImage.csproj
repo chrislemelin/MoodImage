@@ -62,6 +62,12 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.GtkSharp">
+      <HintPath>..\packages\OxyPlot.GtkSharp.1.0.0\lib\net45\OxyPlot.GtkSharp.dll</HintPath>
+    </Reference>
     <Reference Include="NPlot">
       <HintPath>NPlot.dll</HintPath>
     </Reference>
@@ -80,7 +86,6 @@
     <Compile Include="JsonObjects\FaceRectangle.cs" />
     <Compile Include="JsonObjects\Scores.cs" />
     <Compile Include="Resources.cs" />
-    <Compile Include="MoodWindow\DataParser.cs" />
     <Compile Include="MainWindow\MainWindow.cs" />
     <Compile Include="MainWindow\Program.cs" />
     <Compile Include="MoodWindow\Window.cs" />
@@ -88,6 +93,8 @@
     <Compile Include="LiveMoodWindow\LiveMoodWindow.cs" />
     <Compile Include="MoodWindow\MoodWindowSetup.cs" />
     <Compile Include="DataManager\Snapper.cs" />
+    <Compile Include="DataManager\DataParser.cs" />
+    <Compile Include="LiveMoodWindow\LiveMoodSetup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
